@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Inter"
+      rel="stylesheet"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("button").click(function () {
+          $(this).animate({ opacity: "0.8" }, 150, function () {
+            $(this).css("opacity", 1);
+          });
+        });
+
+        $(".toggle").click(function () {
+          $(this).find(".desc-toggle").slideToggle("slow");
+
+          if ($(this).find(".desc-toggle").is(":visible")) {
+            $(this).css("background-color", "#E5F0B6");
+          } else {
+            $(this).css("background-color", "white");
+          }
+
+          console.log($(this).find(".desc-toggle").is(":visible"));
+        });
+      });
+    </script>
+    <title>Sekawan Media</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="navbar container">
+        <img src="./assets/logo.svg" alt="logo" />
+        <ul class="menu container">
+          <li><a href="#about-us">About Us</a></li>
+          <li><a href="#furniture">Furniture</a></li>
+          <li><a href="#partnerships">Partnerships</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="button-wrapper">
+          <button class="signup">Sign Up</button>
+          <button class="cart-button">
+            <img src="./assets/cart.svg" alt="cart" />
+          </button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section id="about-us">
+        <div class="content">
+          <p>The kind of furniture you have been looking for</p>
+          <div class="wrapper">
+            <div><button class="button catalog">Search Catalog</button></div>
+            <div><button class="button video">Watch Videos</button></div>
+          </div>
+        </div>
+
+        <img class="img" src="./assets/about-us/aboutus.svg" alt="about us" />
+      </section>
+      <section id="furniture">
+        <p class="text1">WHY CHOOSE US</p>
+        <p class="text2">
+          We care about details and the quality of our products
+        </p>
+        <div class="wrapper">
+          <div>
+            <img src="./assets/about-us/icon frame-3.svg" alt="" />
+            <p>MANUFACTURED WITH QUALITY MATERIALS</p>
+          </div>
+          <div>
+            <img src="./assets/about-us/icon frame-1.svg" alt="" />
+            <p>5 YEARS OF WARRANTY FOR EACH PROFUCT</p>
+          </div>
+          <div>
+            <img src="./assets/about-us/icon frame-2.svg" alt="" />
+            <p>20 YEARS OF EXPERTISE</p>
+          </div>
+        </div>
+      </section>
+      <section id="partnerships">
+        <div class="container">
+          <div>
+            <p class="text1">25+</p>
+            <p class="text2">PARTNERED BRANDS</p>
+          </div>
+          <div class="wrapper">
+            <div class="container img">
+              <img src="./assets/partnerships/Company logo-1.svg" alt="" />
+              <img src="./assets/partnerships/Company logo-2.svg" alt="" />
+              <img src="./assets/partnerships/Company logo-3.svg" alt="" />
+              <img src="./assets/partnerships/Company logo-4.svg" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="category" class="container">
+        <div class="img-wrapper">
+          <img src="./assets/category/category3.svg" alt="" />
+          <img src="./assets/category/category2.svg" alt="" />
+          <img src="./assets/category/category1.svg" alt="" />
+        </div>
+        <div class="category-wrapper">
+          <p class="text1">Categories</p>
+          <p class="text2">Furniture Sets Recommendations</p>
+          <div class="toggle-wrapper">
+            <div class="toggle">
+              <b>Bedroom</b>
+              <p class="desc-toggle">
+                Enjoy a great living room aesthetics with your family Designs
+                created for increased comfortability
+              </p>
+            </div>
+            <div class="toggle">
+              <b>Living Room</b>
+              <p class="desc-toggle">
+                Enjoy a great living room aesthetics with your family Designs
+                created for increased comfortability
+              </p>
+            </div>
+            <div class="toggle">
+              <b>Home Office</b>
+              <p class="desc-toggle">
+                Enjoy a great living room aesthetics with your family Designs
+                created for increased comfortability
+              </p>
+            </div>
+            <div class="toggle">
+              <b>Gaming Room</b>
+              <p class="desc-toggle">
+                Enjoy a great living room aesthetics with your family Designs
+                created for increased comfortability
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="product">
+        <div class="container product">
+          <div>
+            <p class="text1">OUR PRODUCTS</p>
+            <p class="text2">This month's best seller</p>
+          </div>
+          <div><button class="see-more">See More</button></div>
+        </div>
+        <div>
+          <ul class="slider-container">
+            <li class="slider-item">
+              <img src="./assets/products/p1.png" alt="" />
+            </li>
+            <li class="slider-item">
+              <img src="./assets/products/p2.png" alt="" />
+            </li>
+            <li class="slider-item">
+              <img src="./assets/products/p1.png" alt="" />
+            </li>
+            <li class="slider-item">
+              <img src="./assets/products/p2.png" alt="" />
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section id="contact">
+        <p class="text1">LIMITED DEALS</p>
+        <p class="text2">
+          Become a member and get 10% off of your first purchase
+        </p>
+        <form class="form" action="submit">
+          <input type="email" placeholder="Enter your email here" />
+          <button>send</button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <div class="container">
+        <div class="desc">
+          <img src="./assets/logo.svg" alt="" height="36px" width="auto" />
+          <p>
+            Dekoor is a furniture company created to fulfill the needs of family
+            with aesthetic feeling in their furniture. Always pay attention to
+            details and give clear communication for the customers. Priority of
+            our design is comfortability.
+          </p>
+        </div>
+        <div class="links">
+          <div>
+            <b>Support</b>
+            <ul class="list-footer">
+              <li><a href="">FAQ</a></li>
+              <li><a href="">Shipping & Returns</a></li>
+              <li><a href="">Care guide</a></li>
+              <li><a href="">Redeem warranty</a></li>
+            </ul>
+          </div>
+          <div>
+            Social Media
+            <ul class="list-footer">
+              <li><a href="">Instagram</a></li>
+              <li><a href="">Facebook</a></li>
+              <li><a href="">Twitter</a></li>
+              <li><a href="">TikTok</a></li>
+            </ul>
+          </div>
+          <div>
+            About Us
+            <ul class="list-footer">
+              <li><a href="">Our Story</a></li>
+              <li><a href="">Designer</a></li>
+              <li><a href="">Craftmanship</a></li>
+              <li><a href="">Sustainability</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
